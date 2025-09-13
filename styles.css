@@ -26,14 +26,14 @@
             background-color: rgb(255, 255, 255);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             border-bottom:#2c3e50 5px solid;
-            height: 170px;  /* lock navbar height */
+            height: 170px;  
             position: sticky;
             top: 0;
             z-index: 100;
         }
 
         .logo img {
-            max-height: 150px; /* scale within navbar height */
+            max-height: 150px; 
             width: auto;
             display: block;
         }
@@ -124,7 +124,6 @@
             border:#2c3e50 5px solid;
         }
 
-        /* Responsive design */
         @media (max-width: 768px) {
             .navbar {
                 flex-direction: column;
@@ -198,7 +197,6 @@
             color: #555;
         }
 
-        /* Responsive design for abilities section */
         @media (max-width: 768px) {
             .abilities-container {
                 grid-template-columns: 1fr;
@@ -266,7 +264,6 @@
             background: #f8f9fa;
         }
         
-        /* Lightbox Modal */
         .modal {
             display: none;
             position: fixed;
@@ -335,7 +332,6 @@
             color: #fdbb2d;
         }
 
-        /* Navigation arrows */
         .prev, .next {
             position: absolute;
             top: 50%;
@@ -363,7 +359,6 @@
             background-color: rgba(0, 0, 0, 0.8);
         }
 
-        /* Responsive adjustments for modal */
         @media (max-width: 768px) {
             .modal-content {
                 max-width: 95%;
@@ -443,12 +438,10 @@
             }
         }
 
-        /* Smooth scrolling behavior */
         html {
             scroll-behavior: smooth;
         }
 
-        /* Section offsets for fixed navbar */
         section {
             scroll-margin-top: 170px;
         }
