@@ -33,23 +33,21 @@
         }
 
         .logo img {
-            max-height: 150px; 
+            max-height: 150px;
             width: auto;
             display: block;
         }
-    /* Hide hover image initially */
-         .logo img.hover {
+
+        .logo img.hover {
             display: none;
         }
 
-        /* When hovered, swap images */
         .logo:hover img.default {
             display: none;
         }
         .logo:hover img.hover {
             display: block;
         }
-
 
         .nav-links {
             list-style-type: none;
