@@ -122,13 +122,11 @@
         </section>
 
         <script>
-            // JavaScript for the modal functionality
             let currentImageIndex = 0;
             const galleryItems = document.querySelectorAll('.gallery-item');
             const images = document.querySelectorAll('.gallery-image');
             const captions = document.querySelectorAll('.gallery-caption');
 
-            // Create modal element
             const modal = document.createElement('div');
             modal.id = 'imageModal';
             modal.className = 'modal';
@@ -142,16 +140,13 @@
                 <a class="next">&#10095;</a>
             `;
 
-            // Add modal to the page
             document.body.appendChild(modal);
 
-            // Add click event to each gallery item
             galleryItems.forEach((item, index) => {
                 item.style.cursor = 'pointer';
                 item.addEventListener('click', () => openModal(index));
             });
 
-            // Modal functions
             function openModal(index) {
                 currentImageIndex = index;
                 const modalImg = document.getElementById('modalImage');
@@ -160,7 +155,6 @@
                 modal.style.display = "block";
                 setTimeout(() => modal.classList.add('show'), 10);
                 
-                // Extract URL from background-image style property
                 const bgImage = images[index].style.backgroundImage;
                 modalImg.src = bgImage.replace('url("', '').replace('")', '');
                 captionText.innerHTML = captions[index].innerHTML;
@@ -189,19 +183,16 @@
                 captionText.innerHTML = captions[currentImageIndex].innerHTML;
             }
 
-            // Event listeners for modal controls
             document.querySelector('.close').addEventListener('click', closeModal);
             document.querySelector('.prev').addEventListener('click', () => changeImage(-1));
             document.querySelector('.next').addEventListener('click', () => changeImage(1));
 
-            // Close modal when clicking outside the image
             modal.addEventListener('click', function(e) {
                 if (e.target === this) {
                     closeModal();
                 }
             });
 
-            // Add keyboard navigation
             document.addEventListener('keydown', function(e) {
                 if (modal.style.display === "block") {
                     if (e.key === 'Escape') {
@@ -214,7 +205,6 @@
                 }
             });
 
-            // Add active class to navigation links based on scroll position
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.nav-link');
 
